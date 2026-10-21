@@ -1,0 +1,45 @@
+# Environments, generated metadata and caches
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+.DS_Store
+Thumbs.db
+# Exclude private notebooks, images, datasets, archives and other weights
+*.ipynb
+.ipynb_checkpoints/
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.tif
+*.tiff
+*.webp
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.safetensors
+*.zip
+*.rar
+*.tar
+*.gz
+/data/*
+!/data/splits/
+/data/splits/*
+!/data/splits/README.md
+/models/*
+!/models/README.md
+/results/*
+!/results/README.md
+# Local secrets and logs
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log

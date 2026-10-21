@@ -1,0 +1,39 @@
+{
+  "seed": 42,
+  "batch_size": 32,
+  "epochs": 20,
+  "patience": 5,
+  "device": "cpu",
+  "dataset_root": "data/NEU-CLS",
+  "splits": "data/splits",
+  "experiments": {
+    "cnn_sgd": {
+      "model": "cnn",
+      "optimizer": "sgd",
+      "lr": 0.01
+    },
+    "cnn_adam": {
+      "model": "cnn",
+      "optimizer": "adam",
+      "lr": 0.001
+    },
+    "gap_adam": {
+      "model": "gap",
+      "optimizer": "adam",
+      "lr": 0.001
+    },
+    "resnet_frozen": {
+      "model": "resnet_frozen",
+      "optimizer": "adam",
+      "lr": 0.001
+    },
+    "resnet_finetuned": {
+      "model": "resnet_finetuned",
+      "optimizer": "adam",
+      "lr": 1e-05,
+      "head_lr": 0.0001,
+      "epochs": 15,
+      "init_checkpoint": "models/best_resnet18_frozen.pth"
+    }
+  }
+}
